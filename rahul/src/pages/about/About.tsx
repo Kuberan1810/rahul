@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import ProblemToPrototype from './components/ProblemToPrototype';
 
-const About = () => {
+export const About: React.FC = () => {
   return (
-    <div>About</div>
-  )
-}
+    <div className="min-h-screen bg-[#f8f9fa] text-gray-900 selection:bg-[#E2F163] selection:text-black">
+      <ProblemToPrototype />
+    </div>
+  );
+};
 
-export default About
+export default About;
