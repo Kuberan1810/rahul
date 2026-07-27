@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export const Contact: React.FC = () => {
@@ -8,6 +9,7 @@ export const Contact: React.FC = () => {
         <p className="hero-description text-gray-600 mb-6">
           Have a project proposal, opportunity, or just want to connect? Send a message!
         </p>
+
 
         <form onSubmit={(e) => e.preventDefault()} className="w-full space-y-4 text-left">
           <div>
