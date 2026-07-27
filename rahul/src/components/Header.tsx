@@ -1,51 +1,40 @@
-import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import portraitImg from '../assets/portrait.jpg';
+import heroImgUrl from "../assets/home/rahul-nav.svg"
 
-export const Header: React.FC = () => {
-  const navItems = [
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' },
-  ];
+export const Header = () => {
 
   return (
-    <header className="sticky top-4 z-50 flex justify-center items-center px-4 w-full transition-all duration-300">
-      <nav className="glass-nav flex items-center gap-2 p-1.5 md:p-2 rounded-full shadow-2xl transition-all duration-300 hover:shadow-3xl">
-        {/* Profile Avatar link */}
-        <Link 
-          to="/" 
-          className="relative flex items-center justify-center group overflow-hidden rounded-full w-10 h-10 md:w-11 md:h-11 border border-black/10 transition-transform duration-300 hover:scale-105 active:scale-95"
-          title="Home"
-        >
-          <img 
-            src={portraitImg} 
-            alt="Rahul" 
-            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-200" />
-        </Link>
-
-        {/* Nav Links */}
-        <div className="flex items-center gap-1 sm:gap-2 px-1">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.name}
-              to={item.path}
-              className={({ isActive }) =>
-                `text-sm md:text-base font-medium px-4 py-2 rounded-full transition-all duration-300 ${
-                  isActive
-                    ? 'bg-black text-white shadow-md scale-105'
-                    : 'text-gray-800 hover:text-black hover:bg-black/5'
-                }`
-              }
-            >
-              {item.name}
-            </NavLink>
-          ))}
+    <div data-animation="default" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" className="navbar w-nav">
+      <div className="grid-navbar">
+        <nav role="navigation" className="nav-menu w-nav-menu">
+          <Link to="/" className="w-inline-block w--current">
+            <img src={heroImgUrl} loading="lazy" alt="Hero image" className="mycv" />
+          </Link>
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => `nav-link w-nav-link ${isActive ? 'w--current' : ''}`}
+          >
+            About
+          </NavLink>
+          <NavLink 
+            to="/projects" 
+            className={({ isActive }) => `nav-link w-nav-link ${isActive ? 'w--current' : ''}`}
+          >
+            Projects
+          </NavLink>
+          
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => `nav-link w-nav-link ${isActive ? 'w--current' : ''}`}
+          >
+            Contact
+          </NavLink>
+        </nav>
+        <div id="w-node-bc339dbc-2a59-0847-4b81-c02c2ccf17dd-2ccf17b1" className="menu-button w-nav-button">
+          <div className="menu-button-icon w-icon-nav-menu"></div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 };
 

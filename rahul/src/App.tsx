@@ -8,7 +8,7 @@ import Contact from './pages/contact/Contact';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-gray-900 flex flex-col font-sans relative selection:bg-[#E2F163] selection:text-black">
+    <div className="">
       {/* Sticky Glassy Header Nav Bar */}
       <Header />
 
