@@ -6,7 +6,7 @@ const cloudIconUrl = "https://cdn.prod.website-files.com/669a015f62a99f6f75e92eb
 const cvPdfUrl = "https://cdn.prod.website-files.com/669a015f62a99f6f75e92ebb/66de8d010bc3de8a9fe4454d_voss-cv.pdf";
 export const Hero = () => {
     return (
-        <section data-w-id="832fef14-836f-f606-3136-324046d72611" className="hero-section GlobalPadding ">
+        <section data-w-id="832fef14-836f-f606-3136-324046d72611" className="hero-section   ">
             <div className="w-layout-blockcontainer container w-container">
                 <div data-w-id="2d8052cc-6641-bd52-6174-af81b83fd02d" className="hero-content">
                     <a href="mailto:rahulrajanvasudeavan@gmail.com" className="hero-email">
@@ -23,7 +23,7 @@ export const Hero = () => {
                         <h1 className="hero-title">Hi, I'm Rahul!</h1>
                     </div>
 
-                    <p className="hero-description">Developer and Startup entrepreneur</p>
+                    <p className="hero-description">UI/UX developers</p>
 
                     <img
                         src={heroImgUrl}
